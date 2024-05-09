@@ -1,0 +1,15 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    image: todolist-api
+    ports:
+      - "8080:8080"
+  client:
+    build: 
+      context: .
+      dockerfile: Dockerfile.client
+    image: todolist-client
+    ports:
+      - "3000:3000"
